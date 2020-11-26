@@ -1,3 +1,4 @@
+/*=====================Polices==========================*/
 @font-face {
   font-family: "robotoregular";
   src: url("Roboto-Regular-webfont.eot");
@@ -49,6 +50,7 @@ footer ul {
   list-style-type: none;
   color: white;
   padding-left: 0.5rem;
+  cursor: pointer;
 }
 footer ul li {
   margin-bottom: 0.5rem;
@@ -56,6 +58,9 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: white;
+}
+footer ul li a:hover {
+  font-weight: bold;
 }
 footer ul li .utensils {
   margin-right: 1rem;
@@ -106,6 +111,9 @@ footer ul li .hands {
 .explorer__btn:hover {
   opacity: 0.8;
   box-shadow: 0px 8px 5px #b9b7b7;
+}
+.explorer__btn:focus {
+  outline-style: none;
 }
 
 aside {
@@ -231,7 +239,7 @@ aside .operation__txt {
   font-weight: bold;
 }
 
-/*===========================Restaurant 1========================*/
+/*===========================Restaurants========================*/
 .photorest {
   object-fit: cover;
   object-position: center;
@@ -307,7 +315,7 @@ aside .operation__txt {
 .menu .choice .price {
   font-weight: bold;
   position: absolute;
-  right: 25px;
+  right: 8%;
   margin-left: 50px;
   transform: translateX(0);
   transition: transform 700ms;
@@ -371,14 +379,13 @@ aside .operation__txt {
     transform: translateY(0px);
   }
 }
-/*===================Spinner==============*/
+/*===================Animation Loading Spinner==============*/
 .lds-ring {
-  display: block;
   position: absolute;
-  left: 40%;
-  top: 40%;
-  width: 20%;
-  height: 20%;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
   animation: loading-end 0s 2400ms forwards;
 }
 
@@ -426,32 +433,80 @@ aside .operation__txt {
 }
 .fade {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 1024px;
+  height: 250%;
   background-color: #9956dc;
   opacity: 0.2;
-  animation: fade 2400ms 100ms forwards ease-in-out;
   animation: fade-end 0s 2400ms forwards;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0.2;
-  }
-  95% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
 @keyframes fade-end {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-9999px);
+  }
+}
+/*=============================Responsive=========================*/
+@media screen and (min-width: 479px) and (max-width: 1023px) {
+  aside {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  aside .responsive {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  aside .responsive .operation {
+    width: 300px;
+  }
+
+  .menu .choice:hover .price {
+    transform: translateX(-520%);
+  }
+
+  .restaurants .new {
+    left: 80%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+    margin: auto;
+  }
+
+  aside {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  aside .responsive {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  aside .responsive .operation {
+    margin: 0;
+    width: 33%;
+  }
+
+  .restaurants .new {
+    left: 85%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .menu .choice:hover .price {
+    transform: translateX(-700%);
   }
 }
 
