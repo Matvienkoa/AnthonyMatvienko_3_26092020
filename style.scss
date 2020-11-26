@@ -19,7 +19,20 @@
     font-style: normal;
 }
 
-/*===================All pages===================*/
+/*====================Variables===================*/
+
+$primarycolor: #9356DC;
+$secondarycolor: #FF79DA;
+$tertiarycolor: #99E2D0;
+$bg: #f6f6f6;
+
+/*====================Mixin==================*/
+
+@mixin shadow {
+    box-shadow: 0px 6px 6px #D5D5D5;
+}
+
+/*===================Shared===================*/
 
 body {
     width: 100%;
@@ -81,7 +94,7 @@ footer {
 
 .explorer {
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: $bg;
      &__localisation {
         background-color: #EAEAEA;
         margin-top: 0%;
@@ -111,8 +124,8 @@ footer {
         height: 50px;
         border: none;
         color: white;
-        background-image: linear-gradient(347deg, #9356DC,#FF79DA);
-        box-shadow: 0px 6px 6px #D5D5D5;
+        background-image: linear-gradient(347deg,$primarycolor,$secondarycolor);
+        @include shadow;
         cursor: pointer;
         transition: opacity 500ms, box-shadow 500ms;
         &:hover{
@@ -135,23 +148,23 @@ aside {
         margin-left: -5px;
     }
     .operation {
-        background-color: #F6F6F6;
+        background-color: $bg;
         border-radius: 20px;
         max-width: 300px;
         height: 70px;
         margin: 20px auto;
         display: flex;
         align-items: center;
-        box-shadow: 0px 6px 6px #D5D5D5;
+        @include shadow;
         &:hover {
             background-color: #F5EDFF;
             .operation__logo {
-                color: #9356DC;
+                color:$primarycolor;
             }
         }
     }
     .operation__number {
-        background-color: #9356DC;
+        background-color: $primarycolor;
         border-radius: 30px;
         width: 18px;
         text-align: center;
@@ -172,7 +185,7 @@ aside {
 }
 
 .restaurants {
-    background-color: #F6F6F6;
+    background-color:$bg;
     margin-top: 40px;
     padding-bottom: 30px;
     h2 {
@@ -184,7 +197,7 @@ aside {
         position: relative;
         left: 70%;
         top: 40px;
-        background-color: #99E2d0;
+        background-color: $tertiarycolor;
         padding: 8px;
         font-weight: bold;
         font-size: 0.9rem;
@@ -203,7 +216,7 @@ aside {
         overflow: hidden;
         height: 270px;
         border-radius: 15px;
-        box-shadow: 0px 6px 6px #D5D5D5;
+        @include shadow;
         background-color: white;
         img {
             object-fit: cover;
@@ -260,7 +273,7 @@ aside {
 
 .menu {
     width: 100%;
-    background: #F6F6F6;
+    background: $bg;
     border-radius: 40px 40px 0 0;
     margin-top: -80px;
     z-index: 2;
@@ -287,7 +300,7 @@ aside {
         margin-left: 30px;
         margin-bottom: 1.5rem;
         .underline{
-            border-bottom: 3px #99E2d0 solid;
+            border-bottom: 3px $tertiarycolor solid;
             padding-bottom: 7px;
         }
     }
@@ -297,7 +310,7 @@ aside {
         margin: auto;
         background: white;
         border-radius: 10px;
-        box-shadow: 0px 6px 6px #D5D5D5;
+        @include shadow;
         margin-bottom: 1.5rem;
         display: flex;
         justify-content: space-between;
@@ -347,7 +360,7 @@ aside {
         .anim{
             width: 20%;
             height: auto;
-            background-color: #99E2d0;
+            background-color: $tertiarycolor;
             text-align: center;
             border-radius: 0 10px 10px 0;
             display: flex;
@@ -364,6 +377,8 @@ aside {
            } 
         }
         
+/*----------------------Animation Menu--------------------*/
+
     }
     .V2 {
         display: block;
@@ -392,7 +407,7 @@ aside {
     }
 }
 
-/*===================Animation Loading Spinner==============*/
+/*===================Loading Spinner==============*/
 
 .lds-ring {
     position: absolute;
@@ -412,7 +427,7 @@ aside {
     border: 12px solid #fff;
     border-radius: 50%;
     animation: lds-ring 1.2s 100ms forwards cubic-bezier(0.5, 0, 0.5, 1) 2;
-    border-color: #99e2d0 #FF79DA transparent transparent;
+    border-color: $tertiarycolor $secondarycolor transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -442,6 +457,8 @@ aside {
           transform: translateX(-9999px);
       }
   }
+
+/*----------------------------Fade--------------------*/
 
   .fade{
       position: absolute;

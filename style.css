@@ -12,7 +12,9 @@
   font-weight: normal;
   font-style: normal;
 }
-/*===================All pages===================*/
+/*====================Variables===================*/
+/*====================Mixin==================*/
+/*===================Shared===================*/
 body {
   width: 100%;
   margin: auto;
@@ -72,7 +74,7 @@ footer ul li .hands {
 /*===================Index=======================*/
 .explorer {
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .explorer__localisation {
   background-color: #EAEAEA;
@@ -127,7 +129,7 @@ aside h3 {
   margin-left: -5px;
 }
 aside .operation {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 20px;
   max-width: 300px;
   height: 70px;
@@ -163,7 +165,7 @@ aside .operation__txt {
 }
 
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin-top: 40px;
   padding-bottom: 30px;
 }
@@ -176,7 +178,7 @@ aside .operation__txt {
   position: relative;
   left: 70%;
   top: 40px;
-  background-color: #99E2d0;
+  background-color: #99E2D0;
   padding: 8px;
   font-weight: bold;
   font-size: 0.9rem;
@@ -250,7 +252,7 @@ aside .operation__txt {
 
 .menu {
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 40px 40px 0 0;
   margin-top: -80px;
   z-index: 2;
@@ -279,7 +281,7 @@ aside .operation__txt {
   margin-bottom: 1.5rem;
 }
 .menu h2 .underline {
-  border-bottom: 3px #99E2d0 solid;
+  border-bottom: 3px #99E2D0 solid;
   padding-bottom: 7px;
 }
 .menu .choice {
@@ -295,6 +297,7 @@ aside .operation__txt {
   padding-left: 1rem;
   overflow: hidden;
   cursor: pointer;
+  /*----------------------Animation Menu--------------------*/
 }
 .menu .choice:hover > .anim {
   transform: translateX(0);
@@ -338,7 +341,7 @@ aside .operation__txt {
 .menu .choice .anim {
   width: 20%;
   height: auto;
-  background-color: #99E2d0;
+  background-color: #99E2D0;
   text-align: center;
   border-radius: 0 10px 10px 0;
   display: flex;
@@ -379,7 +382,7 @@ aside .operation__txt {
     transform: translateY(0px);
   }
 }
-/*===================Animation Loading Spinner==============*/
+/*===================Loading Spinner==============*/
 .lds-ring {
   position: absolute;
   left: 50%;
@@ -399,7 +402,7 @@ aside .operation__txt {
   border: 12px solid #fff;
   border-radius: 50%;
   animation: lds-ring 1.2s 100ms forwards cubic-bezier(0.5, 0, 0.5, 1) 2;
-  border-color: #99e2d0 #FF79DA transparent transparent;
+  border-color: #99E2D0 #FF79DA transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {
@@ -431,6 +434,7 @@ aside .operation__txt {
     transform: translateX(-9999px);
   }
 }
+/*----------------------------Fade--------------------*/
 .fade {
   position: absolute;
   width: 1024px;
