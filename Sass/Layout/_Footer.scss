@@ -1,0 +1,35 @@
+footer {
+    background-color: #353535;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    h3 {
+        font-family: 'Shrikhand-Regular', Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: normal;
+        margin-top: 1.3rem;
+        margin-left: 0.5rem;
+    }
+    ul {
+        list-style-type: none;
+        color: white;
+        padding-left: 0.5rem;
+        cursor: pointer;
+        li {
+            margin-bottom: 0.5rem;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover{
+                    font-weight: bold;
+                }
+            }
+            .utensils {
+                margin-right: 1rem;
+            }
+            .hands {
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}
