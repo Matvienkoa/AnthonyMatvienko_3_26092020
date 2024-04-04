@@ -5,11 +5,15 @@
 ## Objectif
 
 Apprendre à développer plusieurs page web en HTML et CSS
+
 Utilisation de SASS
+
 Maitriser le responsive
+
 Inclure des animations en CSS
 
 ## Techno utilisées
 
 HTML
+
 CSS - SASS
